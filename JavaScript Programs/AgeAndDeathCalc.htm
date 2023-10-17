@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+</head>
+<body>
+    <center>
+        <div>
+            <h1>Age And Death Calculator:</h1>
+            <label>Name</label>
+            <input type="text" id="name" placeholder="Enter Your name">
+            <br>
+            <label>Age</label>
+            <input type="number" id="age" placeholder="Enter your age">
+            <br><br>
+            <button type="button" ondblclick="calu()">Calculate</button>
+            <br>
+            <p id="msg" style="color: red;"></p>
+
+        </div>
+    </center>
+    <script>
+        function calu()
+        {
+            var name = document.getElementById("name").value;
+            var age = parseInt(document.getElementById("age").value);
+            var ageDays = age*365.25;
+            var remdays = (60-age)*365.25;
+            document.getElementById('msg').innerHTML ="Name: " + name +" Age: " + age+" Remdays: " + remdays;
+        }
+       </script>
+    
+</body>
+</html>

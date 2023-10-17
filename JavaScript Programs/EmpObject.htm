@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Employee Object</title>
+</head>
+<body>
+    <center>
+        <div>
+            <label>EmpName</label>
+            <input type="text" id="name"></input><br>
+            <label>EmpId</label>
+            <input type="text" id="id"></input><br>
+            <label>EmpSalary</label>
+            <input type="text" id="salary"></input><br>
+            <button type="button" onclick="addemp()">AddEmployee</button>
+           
+        </div>
+        <div>
+            <h1>Employee Details</h1>
+            <table border="1px">
+                <thead>
+                    <th>EmpName</th>
+                    <th>EmpId</th>
+                    <th>EmpSalary</th>
+                </thead>
+                <tbody id="newtable">
+                    
+                        
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </center>
+    <script>
+        var emparr = new Array();
+        var empobj= new Object();
+        function addemp() 
+        {
+            var name = document.getElementById('name').value;
+            var id = parseInt(document.getElementById('id').value);
+            var salary = parseFloat(document.getElementById('salary').value);
+            empobj = { name, id, salary}
+            emparr.push(empobj);
+
+            document.getElementById('newtable').innerHTML = " ";
+           
+            for(var i=0; i<emparr.length; i++)
+            {
+                var newRow = document.createElement("tr");
+                newRow.innerHTML +="<td>" + emparr[i].name + "</td>"+"<td>" + emparr[i].id + "</td>"+"<td>" + emparr[i].salary + "</td>";
+                document.getElementById('newtable').appendChild(newRow);
+            }
+           
+        }
+        
+    </script>
+    
+</body>
+</html>

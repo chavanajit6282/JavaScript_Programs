@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Payment Calculator</title>
+</head>
+<body>
+    <center>
+        <h1>Payment Calculator</h1>
+   
+    <form>
+        <fieldset style="width: 40%;">
+            <legend>Enter Loan Information</legend>
+            <table>
+                <tr>
+                    <td><label for="amt">1.Amount Of Loan</label></td>
+                    <td><input type="number" id="amt"></td>
+                </tr>
+                <tr>
+                    <td><label for="roi">2.Annual percentage Rate of intrest</label></td>
+                    <td><input type="number" id="roi"></td>
+                </tr>
+                <tr>
+                    <td><label for="yr">3.Repayment Period in Year</label></td>
+                    <td><input type="number" id="yr"></td>
+                </tr>
+               
+                <tr><td><h4>Payment Information</h4></td></tr>
+                    
+                <tr>
+                    <td><label for="month">4.Your Monthely Payment will be</label></td>
+                    <td><input type="number" id="month" readonly></td>
+                </tr>
+                <tr>
+                    <td><label for="tp">5.Your Total Payment Will be</label></td>
+                    <td><input type="number" id="tp" readonly></td>
+                </tr>
+                <tr>
+                    <td><label for="ti">6.Your total intrest Payment will be</label></td>
+                    <td><input type="number" id="ti" readonly></td>
+                </tr>
+                
+            </table>
+            <hr>
+            <button type="button" onclick="compute()">Compute</button>
+        </fieldset>
+    </form>
+</center>
+    <script>
+        function compute()
+        {
+            var p = parseInt(document.getElementById("amt").value);
+            var r = parseFloat(document.getElementById("roi").value);
+            var t = parseInt(document.getElementById("yr").value);
+            if(p<1500000 && (t>7 && t<15))
+            {
+                var si = (p*r*t)/100;
+                var total = p+si;
+                var monthly = Math.round(total/(t*12));
+                document.getElementById("tp").value = total; 
+                document.getElementById("month").value = monthly; 
+                document.getElementById('ti').value = si;
+            }
+            else
+            {
+                alert("Please enter valid info");
+            }
+            
+
+        }
+
+    </script>
+    
+</body>
+</html>

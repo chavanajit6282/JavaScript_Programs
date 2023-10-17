@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>RectAngle And Circle</title>
+</head>
+<body>
+    <center>
+        <div>
+            <h1>RectAngle</h1>
+            <label>Length</label>
+            <input type="text" id="length"></input><br>
+            <label>Width</label>
+            <input type="text" id="width"></input><br>
+            <br><br>
+            <h1>Circle</h1>
+            <label>Radius</label>
+            <input type="text" id="radius"></input><br>
+            <br><br>
+            <button type="button" onclick="reccir()">Show</button>
+        </div>
+    </center>
+    <script>
+        function reccir(){
+            var l = parseFloat(document.getElementById("length").value);
+            var w = parseFloat(document.getElementById("width").value);
+            var r = parseFloat(document.getElementById("radius").value);
+            var rectangle = {
+                l,w,
+                are:function()
+                {
+                    return this.l*this.w;
+                },
+                per:function()
+                {
+                    return 2*(this.l+this.w);
+                }
+            }
+            var Circle = {
+                r,
+                area:function()
+                { 
+                    return (Math.PI*(this.r*this.r));
+
+                }
+            }
+           console.log(rectangle.are());
+           console.log(rectangle.per());
+           console.log(Circle.area());
+
+
+        }
+    </script>
+    
+</body>
+</html>

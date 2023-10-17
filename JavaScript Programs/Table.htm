@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function table()
+        {
+            var num1 = parseInt(document.getElementById('num1').value);
+            document.write('<table border = 1px>');
+                for (var i = 1; i <=10;i++) 
+                {
+                    document.write('<tr>');
+                        document.write('<td>'+(num1)+"X"+(i)+'</td>');
+                        document.write('<td>'+(num1*i)+'</td>');
+                    document.write('</tr>');
+                }
+                document.write('</table>');
+        }
+    </script>
+    
+</head>
+<body>
+    <center>
+        <div>
+            <label>Num</label>
+            <input type="text" id = "num1" placeholder="Enter a number"></input><br>
+            <button onclick="table()">Table</button>
+
+        </div>
+    </center>
+    
+</body>
+</html>

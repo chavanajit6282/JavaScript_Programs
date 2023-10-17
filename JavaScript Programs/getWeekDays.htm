@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function getWeekDay(date)
+        {
+            var day = new Date(date).getDay();
+            switch(day)
+            {
+                case 0:
+                return "Sunday";
+                break;
+            case 1:
+                return "Monday";
+                break;
+            case 2:
+                return "Tuesday";
+                break;
+            case 3:
+                return "Wednsday";
+                break;
+            case 4:
+                return "Thursday";
+                break;
+            case 5:
+                return "Friday";
+                break;
+            case 6:
+                return "Saturday";
+                break;
+            
+            }
+        }
+        alert(getWeekDay("2023-9-29"));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

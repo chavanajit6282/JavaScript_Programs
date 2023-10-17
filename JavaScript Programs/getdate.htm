@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head> 
+    
+  </head>
+  <body>
+    <center>
+      <div>
+        <h1>Get Date</h1>
+        <p id="msg"></p>
+    
+    
+    </div>
+    </center>
+    <script>
+        var date = new Date();
+        var time =date.getHours();
+        var msgElement = document.getElementById("msg");
+        var day = date.getDay();
+        function getremDays(start,end)
+        {
+            var date1 = new Date(start);
+            var date2 = new Date(end);
+            var onDay = 1000*60*60*24;
+            var date3 = date2-date1;
+            var rdays = Math.round((date3/onDay))
+            console.log(rdays);
+            return rdays;
+        }
+        var rmiDays = getremDays("2023-9-28","2023-12-31");
+        
+        switch(day)
+        {
+            case 0:
+                day = "Sunday";
+                break;
+            case 1:
+                day = "Monday";
+                break;
+            case 2:
+                day = "Tuesday";
+                break;
+            case 3:
+                day = "Wednsday";
+                break;
+            case 4:
+                day = "Thursday";
+                break;
+            case 5:
+                day = "Friday";
+                break;
+            case 6:
+                day = "Saturday";
+                break;
+            
+
+        }
+        if(time>6 && time<12)
+        {
+            document.getElementById("msg").innerHTML = `Today is${day},${date.getDate()}/${date.getMonth()}/${date.getFullYear()},Welcome , and Good Morning to you.Number of days left till end of year is:${rmiDays}`;
+
+        }
+        else if(time>12 && time<18)
+        {
+            msgElement.innerHTML = `Today is ${day}, ${date.getDate()}/${date.getMonth()}/${date.getFullYear()}, Welcome, and Good AfterNoon to you. Number of days left till the end of the year is:${rmiDays}`;
+
+        }
+        else
+        {
+
+            document.getElementById("msg").innerHTML = `Today is${day},${date.getDate()}/${date.getMonth()}/${date.getFullYear()},Welcome , and Good Evening to you.Number of days left till end of year is:${rmiDays}`;
+        }
+        
+    </script>
+  </body>
+</html>

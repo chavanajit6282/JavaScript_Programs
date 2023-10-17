@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        
+       /* function callmin()
+        {
+            var nov = parseInt(document.getElementById('val').value);
+            var arr = new Array();
+            for(var i=0;i<nov;i++)
+            {
+                var value = parseInt(document.getElementById('vals').value)
+                arr.push(value);
+            }
+           
+        }*/
+        min(11,44,55,1,66,33,0);
+        function min(...myrest)
+        {
+            myrest.sort((a,b)=>a-b);
+            alert("Min Number is"+myrest[0]);
+            
+
+
+        }
+
+        </script>
+</head>
+<body>
+    <center>
+        <div>
+            <h1>Min Number:</h1>
+            
+           
+        </div>
+    </center>
+    
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Postive</title>
+</head>
+<body>
+    <center>
+        <h1>Print Message</h1>
+        <label for="num">Number</label>
+        <input type="number" name="num" id="num" placeholder="Enter a Number">
+        <button type="submit" onclick="show()">Show</button>
+        <p id="msg"></p>
+    </center>
+    <script>
+        function show(){
+            var n = parseInt(document.getElementById("num").value);
+            if(n<=0)
+            {
+                document.getElementById("msg").innerHTML = "Entered Number is out of range";
+            }
+            else if(n>1000)
+            {
+                document.getElementById("msg").innerHTML = "Entered Number is out of range";
+            }
+            else
+            {
+                var rmi = 0;
+                var sum = 0;
+              
+                while(n!=0)
+                {
+                    rmi = n%10;
+                    sum = sum + rmi;
+                    n = n/10;
+
+                }
+               
+                document.getElementById("msg").innerHTML ="Sum of number is" +Math.round(sum);
+            }
+
+        }
+
+    </script>
+    
+</body>
+</html>

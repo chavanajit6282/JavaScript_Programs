@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Find Divs with "Training"</title>
+</head>
+<body>
+    <div>This is aexample.</div>
+    <div>Another training div.</div>
+    <div>No here.</div>
+    <div>Training is important.</div>
+
+    <script>
+        // Get all div elements on the page
+        var divs = document.getElementsByTagName('div');
+
+        // Iterate through each div and check if it contains the word "training"
+        for (var i = 0; i < divs.length; i++) {
+            var div = divs[i];
+            var text = div.textContent || div.innerText; // Get the text content of the div
+
+            // Check if the text content contains the word "training" (case insensitive)
+            if (text.toLowerCase().includes("training")) {
+                // If it does, do something with the div, for example, highlight it
+                div.style.backgroundColor = "yellow";
+            }
+        }
+    </script>
+</body>
+</html>

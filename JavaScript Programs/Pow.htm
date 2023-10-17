@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function pow()
+        {
+            var b = parseInt(document.getElementById('base').value);
+            var e = parseInt(document.getElementById('exponent').value);
+            var pow =1;
+
+            for(var i = 1; i <=e;i++)
+            {
+               pow = pow*b;
+            }
+            alert("Power of Number is:"+pow);
+        }
+    </script>
+   
+</head>
+<body>
+    <center>
+        <div>
+            <h1>Power of Number:</h1>
+            <label>Base</label>
+            <input type="text" id="base"></input><br>
+            <label>Exponent</label>
+            <input type="text"id="exponent"></input><br>
+            <button type="button" onclick="pow()">Pow</button>
+        </div>
+    </center>
+    
+</body>
+</html>

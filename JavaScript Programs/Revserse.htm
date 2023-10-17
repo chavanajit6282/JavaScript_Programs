@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Reverse Word Array</title>
+    <script>
+        var arr = ['ajit','amit','chavan','kaka','ashish'];
+        var arr1  = new Array(arr.length); 
+        document.write("Noraml Array:")
+        document.write("<br>");
+        document.write(arr);
+        document.write("<br>");
+        for (var i = 0; i < arr.length; i++)
+        {
+            var letter = new Array();
+            var str = arr[i];
+            for(var j = str.length-1; j>=0 ;j--)
+            {
+               
+                letter.push(str[j]);
+            }
+            var word = letter.join("");
+            
+           arr1.push(word);
+
+        }
+        
+        document.write("Updated Array:");
+        document.write("<br>");
+        arr1.shift();
+        arr1.shift();
+        arr1.shift();
+        arr1.shift();
+        arr1.shift();
+        document.write(arr1.sort());
+       
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

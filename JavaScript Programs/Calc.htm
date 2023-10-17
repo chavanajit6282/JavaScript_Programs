@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function calc()
+        {
+            var n1 = parseInt(document.getElementById("num1").value);
+            var n2 = parseInt(document.getElementById("num2").value);
+            var opr = document.getElementById('operation').value;
+            switch(opr)
+            {
+                case '+':
+                    var res = n1+n2;
+                    document.write(res);
+                    break;
+                case '-':
+                    var res = n1-n2;
+                    document.write(res);
+                    break;
+                case '*':
+                    var res = n1*n2;
+                    document.write(res);
+                    break;
+                case '/':
+                    var res = n1/n2;
+                    document.write(res);
+                    break;
+                
+            }
+
+        }
+    </script>
+    
+</head>
+<body>
+    <center>
+        <div>
+            <label>Num1</label>
+            <input type="text" placeholder="Enter first Number" id="num1"></input><br>
+            <label>Num1</label>
+            <input type="text" placeholder="Enter first Number" id="num2"></input><br>
+            <label>Operation</label>
+            <input type="text" placeholder="Enter operation" id="operation"></input><br>
+            <button type="submit" onclick="calc()">Calc</button>
+        </div>
+    </center>
+    
+</body>
+</html>

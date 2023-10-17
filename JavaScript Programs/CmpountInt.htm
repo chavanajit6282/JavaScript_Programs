@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function compound()
+        {
+            var p = parseFloat(document.getElementById('pri').value);
+            var r = parseFloat(document.getElementById('rat').value);
+            var t = parseFloat(document.getElementById('tim').value); 
+            var ci = [p*(Math.pow((1+(r/100)),t))]-p;
+            document.getElementById('opri').innerHTML+=p;
+            document.getElementById('orat').innerHTML+=r;
+            document.getElementById('otim').innerHTML+=t;
+            document.getElementById('cint').innerHTML+=ci;
+
+        }   
+    </script>
+    
+</head>
+<body>
+    <center>
+        <div>
+            <label>Principal</label>
+            <input type="text" id="pri"></input><br>
+            <label>Rate</label>
+            <input type="text" id="rat"></input><br>
+            <label>Time</label>
+            <input type="text" id="tim"></input><br>
+            <button type="button" onclick="compound()">CI</button>
+            <p>******************************</p>
+            <h1>Compound Intrest</h1>
+            <p>******************************</p>
+            <p id="opri">Principal:&nbsp;-</p>
+            <p id="orat">Rate:&nbsp;-</p>
+            <p id="otim">Time:&nbsp;-</p>
+            <p id="cint">Compound Intrest:&nbsp;-</p>
+
+ 
+ 
+        </div>
+    </center>
+    
+</body>
+</html>

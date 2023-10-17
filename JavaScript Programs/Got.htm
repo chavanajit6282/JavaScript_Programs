@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Gratest of three Number</title>
+    <script>
+        function got()
+        {
+            var n1 = parseInt(document.getElementById('num1').value);
+            var n2 = parseInt(document.getElementById('num2').value);
+            var n3 = parseInt(document.getElementById('num3').value);
+           
+            if(n1>n2 && n1>n3)
+            {
+                alert('Number'+n1+' is greate');
+                document.getElementById('res').innerHTML="&nbsp;"+n1+"&nbsp;"+"Is greatest number";
+               
+            }
+            else if(n2>n1 && n2>n3)
+            {
+                document.getElementById('res').innerHTML="&nbsp;"+n2+"&nbsp;"+"Is greatest number";
+               
+            }
+            else
+            {
+                document.getElementById('res').innerHTML="&nbsp;"+n3+"&nbsp;"+"Is greatest number";
+            
+            }   
+
+        }
+
+    </script>
+</head>
+<body>
+    <center>
+    <div style="border: 1px solid black;">
+        <h1>Find Greastest of three number</h1>
+        <label>Num1</label>
+        <input type="text" id = 'num1'></input><br>
+        <label>Num2</label>
+        <input type="text" id = "num2"></input><br>
+        <label>Num3</label>
+        <input type="text" id = "num3"></input><br><br>
+        <button onclick="got()">Find</button>
+        <p style="color: green;" id ="res"></p>
+        
+    </div>
+    </center>
+    
+</body>
+</html>

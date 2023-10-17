@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function sumd()
+        {
+            var num = parseInt(document.getElementById('num').value);
+            var rmi  = 0;
+            var sum = 0;
+            while(num!=0)
+            {
+                rmi = parseInt(num%10);
+                sum = sum+rmi;
+                num = parseInt(num/10);
+            }
+            alert(sum);
+            sum = parseInt(sum);
+            document.getElementById('out').innerHTML+=sum;
+        }
+    </script>
+    
+</head>
+<body>
+    <center>
+        <div>
+            <h1>Sum of Digit:</h1>
+            <label>Number</label>
+            <input type="text" id="num" placeholder="Enter a numner"></input><br>
+            <button type="button" onclick="sumd()">Sum</button>
+            <p id="out">Sum is:</p>
+        </div>
+    </center>
+    
+</body>
+</html>

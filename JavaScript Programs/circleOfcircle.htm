@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+</head>
+<body>
+    <center>
+        <h1>CircumFerence of Circle</h1>
+        <label for="radius"></label>
+        <input type="number" name="radius" id="radius"><br>
+        <button type="button" onclick="calculate()">Display</button><br>
+        <p id="area">Area:</p>
+        <p id="cir">CircumFerence:</p>
+</center>
+<script>
+    function calculate(){
+        var r = parseInt(document.getElementById("radius").value);
+        var Area = Math.floor((Math.PI*r*r));
+        var Cir = Math.floor(2*(Math.PI*r));
+        
+        document.getElementById("area").innerHTML +=Area;
+        document.getElementById("cir").innerHTML +=Cir;
+    }
+</script>
+</body>
+</html>

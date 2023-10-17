@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Employee Array</title>
+   
+</head>
+<body>
+    <center>
+        <div>
+            <label>Name:</label>
+            <input type="text" id="name"></input><br>
+            
+            <button type="button" onclick="addEmp()">Add</button>
+            <button type="button" onclick="DisplayEmp()">Display</button>
+            <h2 id="emp"></h2>
+        </div>
+    </center>
+    <script>
+        var semparr ;
+        var emparr = new Array();
+        function addEmp()
+        {
+            var empname = document.getElementById('name').value;
+           
+            emparr.push(empname);
+            console.log(emparr);
+            semparr = emparr.sort();
+            console.log(semparr);
+            
+        }
+        function DisplayEmp(){
+            for (var i = 0; i<semparr.length; i++)
+            {
+                document.getElementById('emp').innerHTML += semparr[i]+"<br>";
+            }
+
+        }
+    
+       </script>
+    
+</body>
+</html>
